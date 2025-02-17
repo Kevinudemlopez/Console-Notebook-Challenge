@@ -55,6 +55,26 @@ class Notebook:
         return sorted(most_common_tags)[0]
 
 
+class Console:
+    def __init__(self, notebook):
+        self.notebook = notebook
+
+    def add_note(self):
+        title = input("Enter note title: ")
+        text = input("Enter note text: ")
+        importance = input("Enter importance (HIGH, MEDIUM, LOW): ")
+        self.notebook.add_note(title, text, importance)
+
+    def list_notes(self):
+        for note in self.notebook.notes:
+            print(note)
+
+    def add_tag_to_note(self):
+        code = int(input("Enter note code: "))
+        tag = input("Enter tag: ")
+        note = next((note for note in self.notebook.notes if note
+::contentReference[oaicite:1]{index=1}
+
 
 
 
